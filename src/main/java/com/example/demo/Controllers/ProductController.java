@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Services.ProductService;
+import com.example.demo.Core.Utilities.results.DataResult;
 import com.example.demo.Models.Product;
 
 
@@ -18,7 +19,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/getAll")
-    public List<Product> getAllProducts() {
+    public DataResult<List<Product>> getAllProducts() {
         return productService.getAllProducts();
     }
 
