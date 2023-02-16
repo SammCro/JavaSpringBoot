@@ -14,6 +14,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
+
 
 
 @Data
@@ -36,6 +38,7 @@ public class User {
 
     @NotBlank
     @NotNull
+    @Length(min = 6)
     @Column(name = "password")
     private String password;
 }

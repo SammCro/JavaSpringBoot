@@ -20,7 +20,7 @@ public class UserService {
 
     public Result add(User user) {
         this.userRepository.save(user);
-        return new SuccessDataResult<User>("Kullanıcı eklendi");
+        return new SuccessDataResult<User>(user,"Kullanıcı eklendi");
     }
 
     public DataResult<User> getByEmail(String email) {
