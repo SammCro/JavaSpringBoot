@@ -84,7 +84,7 @@ public class ProductService{
 
 	public DataResult<List<Product>> getByNameAndCategory(String productName, int categoryId) {
 		return new SuccessDataResult<List<Product>>
-		(this.ProductRepository.getByNameAndCategory(productName,categoryId),"Data listelendi");
+		(this.ProductRepository.getByProductNameAndCategory(productName,categoryId),"Data listelendi");
 	}
 
 
