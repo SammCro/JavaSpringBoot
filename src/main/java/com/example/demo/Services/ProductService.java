@@ -17,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import com.example.demo.Models.Product;
+import com.example.demo.Models.DTOS.ProductWithCategoryDTO;
 
 
 @Service
@@ -102,6 +103,11 @@ public class ProductService{
 		return new SuccessDataResult<List<Product>>
 		(this.ProductRepository.findAll(sort),"Başarılı");
 	}
+
+	// public DataResult<List<ProductWithCategoryDTO>> getProductWithCategoryDetails() {
+	// 	return new SuccessDataResult<List<ProductWithCategoryDTO>>
+	// 	(this.ProductRepository.getProductWithCategoryDetails(),"Data listelendi");		
+	// }
 
 
 }

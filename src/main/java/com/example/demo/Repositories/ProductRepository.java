@@ -1,5 +1,6 @@
 package com.example.demo.Repositories;
 import com.example.demo.Models.Product;
+import com.example.demo.Models.DTOS.ProductWithCategoryDTO;
 
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,4 +25,9 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     @Query("From Product where productName=:productName and category.categoryId=:categoryId")
     List<Product> getByProductNameAndCategory(String productName, int categoryId);
     
+//     @Query("Select new kodlamaio.northwind.entities.dtos.ProductWithCategoryDto"
+//     + "(p.id, p.productName, c.categoryName) "
+//     + "From Category c Inner Join c.products p")
+// List<ProductWithCategoryDTO> getProductWithCategoryDetails();
+
 }

@@ -12,6 +12,8 @@ import com.example.demo.Services.ProductService;
 import com.example.demo.Core.Utilities.results.DataResult;
 import com.example.demo.Core.Utilities.results.Result;
 import com.example.demo.Models.Product;
+import com.example.demo.Models.DTOS.ProductWithCategoryDTO;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -70,6 +72,11 @@ public class ProductController {
 	public DataResult<List<Product>> getAllSorted() {
 		return this.productService.getAllSorted();
 	}
-	
+
+
+	// @GetMapping("/getProductWithCategoryDetails")
+	// public DataResult<List<ProductWithCategoryDTO>> getProductWithCategoryDetails(){
+	// 	return this.productService.getProductWithCategoryDetails();
+	// }
 	
 }
